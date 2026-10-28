@@ -1,0 +1,40 @@
+[Version]
+Signature="$WINDOWS NT$"
+Class=ActivityMonitor
+ClassGuid={b86dff51-a31e-4bac-b3cf-e8cfe75c9fc2}
+Provider="alw"
+DriverVer=
+CatalogFile=alwflt.cat
+PnpLockdown=1
+
+[DestinationDirs]
+DefaultDestDir = 12
+
+[DefaultInstall]
+OptionDesc = "anti-luckyware filter"
+CopyFiles = alwflt.CopyFiles
+
+[DefaultInstall.Services]
+AddService = alwflt, %SPSVCINST_ASSOCSERVICE%, alwflt.Service
+
+[alwflt.CopyFiles]
+alwflt.sys
+
+[alwflt.Service]
+DisplayName    = "anti-luckyware filter"
+ServiceType    = 2
+StartType      = 3
+ErrorControl   = 1
+ServiceBinary  = %12%\alwflt.sys
+LoadOrderGroup = "FSFilter Activity Monitor"
+Dependencies   = "FltMgr"
+AddReg         = alwflt.AddReg
+
+[alwflt.AddReg]
+HKR,,"SupportedFeatures",0x00010001,0x3
+HKR,"Instances","DefaultInstance",0x00000000,"alwflt Instance"
+HKR,"Instances\alwflt Instance","Altitude",0x00000000,"385210"
+HKR,"Instances\alwflt Instance","Flags",0x00010001,0x0
+
+[Strings]
+SPSVCINST_ASSOCSERVICE = 0x00000002

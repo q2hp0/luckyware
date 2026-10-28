@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ConfigurationType>Driver</ConfigurationType>
+<DriverType>WDM</DriverType>
+<TargetVersion>Windows10</TargetVersion>
+<DriverTargetPlatform>Universal</DriverTargetPlatform>
+<Configuration>Release</Configuration>
+<Platform>x64</Platform>
+<ProjectGuid>{A7B9C3D2-8F61-4E02-9A74-5D6E8F012345}</ProjectGuid>
+<Keyword>Win32Proj</Keyword>
+<RootNamespace>alwflt</RootNamespace>
+</Project> 

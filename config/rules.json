@@ -1,0 +1,15 @@
+{
+  "paths": [
+    "Cookies",
+    "Login Data",
+    "Web Data",
+    "Local State",
+    "cookies.sqlite",
+    "logins.json",
+    "key4.db",
+    "cert9.db",
+    "leveldb"
+  ],
+  "block_chain": true,
+  "suspend_first": true
+}

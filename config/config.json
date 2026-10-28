@@ -1,0 +1,4 @@
+{
+  "allowlist": ["chrome.exe", "msedge.exe", "brave.exe", "firefox.exe", "discord.exe"],
+  "canary": true
+}
